@@ -1,0 +1,103 @@
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.title {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.move-icon {
+  height: 50px;
+  transition: transform 0.3s ease;
+}
+
+.move-button {
+  background-color: transparent;
+  border: 3px dotted #fff;
+  width: 100px;
+  height: 100px;
+  border-radius: 60px;
+  margin: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.move-button:hover .move-icon {
+  transform: scale(1.2);
+}
+
+.move-button:hover {
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+.result {
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: 40px;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.score {
+  margin-top: 30px;
+  font-size: 18px;
+}
+
+.reset {
+  background-color: #fff;
+  color: #000;
+  border: none;
+  font-size: 15px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  margin-top: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.reset:hover {
+  background-color: #ccc;
+  color: #000;
+}
+
+/* MEDIA QUERIES FOR RESPONSIVENESS */
+@media screen and (max-width: 600px) {
+  .move-button {
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+    margin: 5px;
+  }
+
+  .move-icon {
+    height: 40px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .result {
+    font-size: 24px;
+  }
+
+  .score {
+    font-size: 16px;
+  }
+
+  .reset {
+    font-size: 14px;
+    padding: 8px 15px;
+  }
+}
